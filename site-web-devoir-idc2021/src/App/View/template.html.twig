@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og:http://ogp.me/ns#">
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="src/skin/index.css">
+    <link rel="stylesheet" type="text/css" href="src/skin/modal.css?v=10">
+    <link rel="stylesheet" type="text/css" href="src/skin/responsive.css?v=13">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    {% for meta in metaInfo %}
+        {{ meta | raw}}
+    {% endfor %}
+
+</head>
+
+<body>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+
+<header>
+    <nav>
+        <ul class="nav__links">
+            {% for key,value in menu %}
+                <li class="nav-item"><a id={{key}}  href='{{ value }}'> {{ key }}</a></li>
+
+            {% endfor %}
+
+        </ul>
+    </nav>
+
+</header>
+{% if user != false %}
+    <figure id="user" style="padding-top: 15px; padding-bottom: 15px">
+        <img src="Resources/skin/user.png" width="50px" height="40px" style="float: left">
+        <figcaption> Bonjour,
+            {{ user  | raw}}
+        </figcaption>
+    </figure>
+{% endif %}
+
+<main class="container">
+
+    {% if feedback != false %}
+        <div class="feedback">
+            {{ feedback  | raw}}
+        </div>
+    {% endif %}
+
+    {{ content | raw}}
+</main>
+
+</div>
+<script defer>
+    "use strict";
+
+
+    $(window).on("load",function(){
+
+        $(".loader-wrapper").fadeOut("slow");
+        let logout = document.querySelector("#Deconnexion");
+        console.log(logout);
+        logout.setAttribute("onclick", "return  confirm('Etes-vous sur de vouloir nous quitter ? " + "Si oui cliquer sur OK ✅ " +
+            "sinon cliquer sur Annuler ❌ ')");
+        console.log(logout);
+        //logout.addEventListener('clik', function (e){
+        //    return  confirm('Etes-vous sur de vouloir nous quitter ? " + "Si oui cliquer sur OK sinon cliquer sur Annuler ');
+        //});
+    });
+
+    $(window).on('beforeunload', function() {
+        $('#body').hide();
+        $('.loader-wrapper').show();
+        $(window).scrollTop(0);
+    });
+</script>
+
+
+<footer>
+    <p class="footerItem">
+        &copy; {{ footer }}
+    </p>
+</footer>
+</body>
+
+</html>

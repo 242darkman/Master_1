@@ -1,0 +1,19 @@
+{
+    "name": "pc/dm_web_vouvou_kachri_2021",
+    "autoload": {
+        "psr-4": {
+            "Miniframework\\App\\": "src/App"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dark-Brandy",
+            "email": "bvouvou@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.3",
+        "php-ffmpeg/php-ffmpeg": "^0.18.0",
+        "swiftmailer/swiftmailer": "^6.3"
+    }
+}

@@ -1,0 +1,19 @@
+[
+    {
+        "id": 0,
+        "nom": "Lecarpentier",
+        "prenom": "Jean-Marc",
+        "tel": "0123456789",
+        "email": "jean-marc.lecarpentier@unicaen.fr",
+        "password": "$2y$10$MZqzlxlrAuXaeuQiQGyKKenwxFwzLF2szvn8JRpNAvmfP2w5EqRJG"
+    }
+    ,
+     {
+        "id": 1,
+        "nom": "NIVEAU",
+        "prenom": "Alexandre",
+        "tel": "0987654321",
+        "email": "alexandre.niveau@unicaen.fr",
+        "password": "$2y$10$MZqzlxlrAuXaeuQiQGyKKenwxFwzLF2szvn8JRpNAvmfP2w5EqRJG"
+    }
+]

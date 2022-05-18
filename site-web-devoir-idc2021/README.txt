@@ -1,0 +1,1 @@
+--> Les images sont à placé dans le sous-dossier img du dossier database situé à la racine du projet dans le dossier Resources.

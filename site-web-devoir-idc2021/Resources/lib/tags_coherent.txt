@@ -1,0 +1,4 @@
+Caption-Abstract Description ImageDescription
+Location Sub-location
+CopyrightNotice Copyright
+By-line Artist Creator
